@@ -55,3 +55,6 @@ target/
 
 *.tmp
 
+.idea/
+reports/
+cache/
