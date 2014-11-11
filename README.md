@@ -1,12 +1,13 @@
 PreTty-Query-Digest
 ===================
 
+Create a nice HTML table from a MySQL slow query log using pt-query digest http://www.percona.com/doc/percona-toolkit
+
 ```
 usage: launch.py [-h] [--report_path [REPORT_PATH]] [--no_server]
                  [--server_port SERVER_PORT] [--server_address SERVER_ADDRESS]
                  file_name
 
-Nice pt-query-digest
 
 positional arguments:
   file_name             path to the slow query log file
