@@ -112,7 +112,7 @@ body { font-size: 140%; }
                     data-last_seen="{{row.get('ts_max')}}"
                     data-rows_examined="{{row.get('Rows_examined')}}"
                     >
-                <td>{{row.get("metrics").get("db").get("value")}}</td>
+                <td>{{row.get("metrics").get("db", {}).get("value", "N/A")}}</td>
                 <td>{{row.get("fingerprint")}}</td>
                 <td>{{row.get("query_count")}}</td>
                 <td>{{row.get("metrics").get("Query_time").get("median")}}</td>
