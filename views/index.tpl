@@ -35,7 +35,7 @@
 
             $('#result tbody').on('click', 'tr', function() {
                 var d = table.row( this ).data();
-                $("#modal-fingerprint").text(d[1]);
+                $("#modal-fingerprint").text($(this).data("fingerprint"));
                 hljs.highlightBlock($('#modal-fingerprint').get(0));
                 $('#modal-query').text($(this).data("example"));
                 hljs.highlightBlock($('#modal-query').get(0));
@@ -106,6 +106,7 @@ body { font-size: 140%; }
         <tbody>
         % for row in parsed_result.get("classes"):
             <tr
+                    data-fingerprint="{{row.get('fingerprint')}}"
                     data-example="{{row.get('example').get('query')}}"
                     data-first_seen="{{row.get('ts_min')}}"
                     data-last_seen="{{row.get('ts_max')}}"
